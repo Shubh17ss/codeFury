@@ -1,3 +1,7 @@
+*{
+  scroll-behavior: smooth;
+}
+
 body{
     margin:0;
     font-family: 'Merriweather', serif;
@@ -33,13 +37,18 @@ button{
     transition: 0.4s;
     color: 	#DC143C;;
     background-color: rgba(255, 255, 255, 1);
-    border: 1px solid 	#DC143C;;
+    border: 1px solid 	#DC143C;
+
 }
 button:hover {
     color: white;
     box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
     background-color:	#DC143C;;
   }
+
+button:active{
+  transform: scale(95%);
+}
 
   /* Hero Section */
 
@@ -199,3 +208,60 @@ button:hover {
 .importUserSection strong{
   font-size: 2.2rem;
 }
+
+
+
+/* ADMIN CSS */
+
+.adminheroSection{
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 3rem;
+}
+
+.adminheroSection .leftSection{
+  width: 45%;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border:1px solid rgba(0,0,0,0.1);
+  border-radius: 0.6rem;
+  margin:0 0.5rem;
+
+}
+
+.adminheroSection .leftSection div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+.adminheroSection .leftSection div label{
+  font-size: 1.2rem;
+}
+.adminheroSection .leftSection div h2{
+  font-size: 1.4rem;
+}
+.adminListRooms{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding:3rem 0;
+  background-color: #000;
+  color:#f9f6ee;
+}
+.adminListRooms strong{
+  font-size: 2.2rem;
+}
+/* ADMIN CSS */

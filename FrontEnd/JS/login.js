@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
         
       console.log(enteredUsername);
       console.log(enteredPassword);
-
-      alert('LOGIN successfull');
       window.location.assign('home.html'); //to be replaced with home page
      
     });
