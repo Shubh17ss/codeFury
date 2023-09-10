@@ -130,12 +130,12 @@ button:hover {
     width: 95%;
     min-height:80vh;
     height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 3fr));
 }
 
 .meetingListContainer .meetingCard{
-    width: 20%;
+    width: 60%;
     height: 40vh;
     border:2px solid rgba(255,255,255,0.2);
     border-radius: 0.6rem;
@@ -182,6 +182,20 @@ button:hover {
     transform: translateY(-2%);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border:2px solid rgba(255,255,255,0.4);
+}
 
 
+/* Import User Section */
+
+.importUserSection{
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.importUserSection strong{
+  font-size: 2.2rem;
 }
