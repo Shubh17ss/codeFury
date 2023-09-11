@@ -265,3 +265,52 @@ button:active{
   font-size: 2.2rem;
 }
 /* ADMIN CSS */
+
+/* Style the table */
+.scheduledMeetingContainer{
+    width: 95%;
+    min-height:80vh;
+    max-height: 300px;
+    /* height:fit-content; */
+    display:flex;
+    justify-content:center ;
+    align-items: center;
+    overflow: auto;
+}
+
+#scheduledMeetings {
+  width: 80%;
+  border-radius: 10px;
+  border-collapse: collapse;
+  margin: 20px;
+  color: white;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgb(107, 106, 106);
+}
+
+/* Style the table headers */
+#scheduledMeetings th {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-weight: bolder;
+}
+
+/* Style the table cells */
+#scheduledMeetings td {
+  border-bottom: 1px solid #0c0c0c;
+  padding: 18px;
+}
+
+/* Style alternating rows */
+#scheduledMeetings tr:nth-child(even) {
+  background-color: #2a2828;
+}
+
+/* Hover effect on rows */
+#scheduledMeetings tr:hover {
+  background-color: #ddd;
+  color: black;
+  font-weight: bold;
+}
