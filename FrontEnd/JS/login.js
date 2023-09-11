@@ -1,24 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const loginForm = document.getElementById("login-form");
-  
-    // Define an array of username-password pairs with Base64 encrypted usernames and passwords
-    const users = [
-      { username: "QWhtYXQ=", password: "MTIz" }, // "Ahmad" and "123" encrypted with Base64
-      { username: "QWxp", password: "MDk5" }, // "Ali" and "099" encrypted with Base64
-      { username: "VXphcmQ=", password: "Nzg2" }, // "Uzair" and "786" encrypted with Base64
-      { username: "QWJ1", password: "Nzc3" }, // "Abu" and "777" encrypted with Base64
-      { username: "VW1hcg==", password: "MTEx" } // "Umar" and "111" encrypted with Base64
-    ];
-  
-    loginForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const enteredUsername = document.getElementById("username").value;
-      const enteredPassword = document.getElementById("password").value;
-        
-      console.log(enteredUsername);
-      console.log(enteredPassword);
-      window.location.assign('home.html'); //to be replaced with home page
-     
-    });
+  const loginForm = document.getElementById("login-form");
+
+  // Define an array of username-password pairs with Base64 encrypted usernames and passwords
+  const users = [
+    { username: "Admin", password: "admin", role: "Admin" }, // "Ahmad" and "123" encrypted with Base64
+    { username: "Manager", password: "manager", role: "Manager" }, // "Ali" and "099" encrypted with Base64
+    { username: "User", password: "user", role: "User" }, // "Uzair" and "786" encrypted with Base64
+
+  ];
+
+  loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const enteredUsername = document.getElementById("username").value;
+    const enteredPassword = document.getElementById("password").value;
+    let flag = 0;
+    users.forEach((item) => {
+
+      if (item.username == enteredUsername && item.password == enteredPassword) {
+        flag = 1;
+        if (item.role == "Admin") {
+          window.location.assign('admin.html');
+        }
+        else if (item.role == "User") {
+          window.location.assign("home.html");
+        }
+        else {
+          window.location.assign("manager.html");
+        }
+      }
+    })
+    if (flag == 0) {
+      alert('Username or password incorrect');
+    }
+
   });
-  
+});
